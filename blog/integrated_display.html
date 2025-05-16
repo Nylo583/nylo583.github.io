@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <link href="../static/styles.css" rel="stylesheet">
+    </head>
+
+    <body data-bs-theme="dark">
+        <nav class="navbar navbar-expand-md bg-dark border-bottom border-warning-subtle" data-bs-theme="dark">
+            <div class="container-fluid  pb-2" style="max-width:1100px;">
+                <a class="navbar-brand text-bg-dark ms-4 me-2 mt-2" href="../index.html"><b>Nathan Ondrus</b></a>
+                <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mt-2">
+                    <li class="nav-item mx-2">
+                    <a class="nav-link active text-bg-dark" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active text-bg-dark" aria-current="page" href="../work.html">Work</a>
+                        </li>
+                    <li class="nav-item mx-2">
+                    <a class="nav-link text-bg-dark" href="../projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                    <a class="nav-link text-warning" href="../blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item ms-2 me-4">
+                    <a class="nav-link text-bg-dark" href="../gallery.html">Gallery</a>
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-md text-left d-block position-absolute mt-3 mt-sm-5 start-50 translate-middle-x" style="max-width:1100px;">
+            <div class="container-fluid">
+                <img src="../static/projects/integrateddisplay/card.png" class="banner">
+                <div class="d-inline-flex flex-row align-items-center" style="margin-top: -1rem;">
+                    <h1 class="b-title mx-4">Integrated Display</h1>
+                    <h5 class="b-subtitle"><u>September 2024</u></h5>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <a href="../blog.html"><< back to blog directory</a>
+            </div>
+            
+            <div class="col my-4">
+                &emsp;For my e-bike project team's next racing bike, I took on the job of designing the integrated dashboard display after 
+                being the only new member interested in tackling the two-year long project (coincidentally, my work on this project landed me 
+                the low voltage hardware lead after only a year on the team).
+                Essentially, it's the driver's HUD for everything happening on the bike: speed, RPM, coolant temperature and other sensor readouts. 
+                It also doubles as a centralized data hub for all the low voltage sensors onboard, sending live telemetry data back to the pit 
+                throughout the race.
+            </div>
+            <div class="col mt-4 d-flex flex-column-reverse d-sm-block">
+                <div class="text-center text-sm-start">
+                    <figure class="figure float-sm-end ms-sm-4 mb-3" style="max-width: 350px; width: 100%;">
+                      <img src="../static/projects/integrateddisplay/1.jpeg" class="figure-img img-fluid rounded img-thumbnail" alt="...">
+                      <figcaption class="figure-caption text-center">Example CM5 (green) carrier board (black)</figcaption>
+                    </figure>
+                </div>
+                <p>
+                &emsp;The backbone of the system is a custom board built around the Raspberry Pi CM5, with a display mounted directly on its back via an FFC connector. 
+                Offboard sensors feed in over CAN, and we added an IMU and GPS module onboard for position and motion tracking. All of that data gets compiled 
+                in real time and piped out the back of the bike via an SMA cable to a stub antenna, which transmits everything over the 400 MHz band 
+                back to the pit computer. There, a Yagi antenna carrier board (2025 new member project, coming soon) plugged in by USB intercepts the data
+                and logs it.
+                </p>
+            </div>
+            
+            <div class="col mt-4">
+                &emsp;Right now, the display itself hasn't been manufactured yet. The design's finalized and ready to be transferred to a board layout, but we're 
+                still waiting on bike design specs from mechanical to give us a better idea about the kind of space restrictions and whatnot we have to work around. 
+                I'm honestly super excited to see it all in action on FBS 2.
+            </div>
+            <div class="col my-4">
+                &emsp;I'll probably do a follow-up post when the board is manufactured and we get the system tested, but for now, it's one of the largest hardware 
+                designs I've worked on. It's also the first time I've gotten to play around with radio telemetry and CAN integration at this scale, 
+                and it's wild how many things start to come into play when working on a project as large and important as this.
+            </div>
+            <img class="img-fluid w-100 mb-4" src="../static/projects/integrateddisplay/2.JPG">
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    </body>
+</html>

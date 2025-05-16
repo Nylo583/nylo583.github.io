@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <link href="static/styles.css" rel="stylesheet">
+    </head>
+
+    <body data-bs-theme="dark">
+        <nav class="navbar navbar-expand-md bg-dark border-bottom border-warning-subtle" data-bs-theme="dark">
+            <div class="container-fluid  pb-2" style="max-width:1100px;">
+                <a class="navbar-brand text-bg-dark ms-4 me-2 mt-2" href="index.html"><b>Nathan Ondrus</b></a>
+                <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mt-2">
+                    <li class="nav-item mx-2">
+                    <a class="nav-link active text-bg-dark" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active text-bg-dark" aria-current="page" href="work.html">Work</a>
+                        </li>
+                    <li class="nav-item mx-2">
+                    <a class="nav-link text-warning" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                    <a class="nav-link text-bg-dark" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item ms-2 me-4">
+                    <a class="nav-link text-bg-dark" href="gallery.html">Gallery</a>
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-md text-center d-block position-absolute mt-3 mt-sm-5 start-50 translate-middle-x" style="max-width:1100px;">
+            <h1>Projects</h1>
+            <div class="container-fluid mt-5 mb-5">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="static/projects/fannergy/card.png" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column h-100">
+                          <h5 class="card-title">Fannergy</h5>
+                          <p class="card-text flex-grow-1">
+                            AI-driven smart fan designed to save on power.
+                             Controlled through a web-based interface with real-time telemetry.
+                             1st Prize, World Youth Coders' Hackathon.
+                          </p>
+                          <a href="blog/fannergy.html" class="card-link mt-auto">>> read more</a>
+                        </div>
+                        <div class="card-footer text-body-secondary">
+                            August 2022
+                        </div>                        
+                      </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                          <img src="static/projects/websites/card.png" class="card-img-top" alt="...">
+                          <div class="card-body d-flex flex-column h-100">
+                            <h5 class="card-title">Websites</h5>
+                            <p class="card-text flex-grow-1">
+                              The making of this website and previous versions.
+                               Freelance work, personal design, and internship development
+                               for a live-service website.
+                            </p>
+                            <a href="blog/websites.html" class="card-link mt-auto">>> read more</a>
+                          </div>
+                          <div class="card-footer text-body-secondary">
+                              Ongoing since 2022
+                          </div>                        
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                          <img src="static/projects/sudoku/card.png" class="card-img-top" alt="...">
+                          <div class="card-body d-flex flex-column h-100">
+                            <h5 class="card-title">Sudoku</h5>
+                            <p class="card-text flex-grow-1">
+                              Terminal-based sudoku using the C++ ncurses library.
+                               Features WASD navigation, dynamic board creation, and error checking.
+                               Created for the AP CSP Create Project.
+                            </p>
+                            <a href="blog/sudoku.html" class="card-link mt-auto">>> read more</a>
+                          </div>
+                          <div class="card-footer text-body-secondary">
+                              April 2023
+                          </div>                        
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                          <img src="static/projects/roboattend/card.png" class="card-img-top" alt="...">
+                          <div class="card-body d-flex flex-column h-100">
+                            <h5 class="card-title">RoboAttend</h5>
+                            <p class="card-text flex-grow-1">
+                              Standalone Java application for streamlining attendance.
+                              Creates and updates spreadsheets using the Sheets API to provide
+                              attendance logs and automated data collection based on date range,
+                              event type, etc.
+                            </p>
+                            <a href="blog/roboattend.html" class="card-link mt-auto">>> read more</a>
+                          </div>
+                          <div class="card-footer text-body-secondary">
+                              October 2023
+                          </div>                        
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                          <img src="static/projects/airalign/card.png" class="card-img-top" alt="...">
+                          <div class="card-body d-flex flex-column h-100">
+                            <h5 class="card-title">AirAlign</h5>
+                            <p class="card-text flex-grow-1">
+                              Turbine-like sensing modules that create a predictive
+                               model of wind speeds and direction. Intended for use in urban
+                               areas to determine locations for permanent wind power fixtures.
+                               2nd Prize, Invention Convention Americas.
+                            </p>
+                            <a href="blog/airalign.html" class="card-link mt-auto">>> read more</a>
+                          </div>
+                          <div class="card-footer text-body-secondary">
+                              June 2024
+                          </div>                        
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                          <img src="static/projects/integrateddisplay/card.png" class="card-img-top" alt="...">
+                          <div class="card-body d-flex flex-column h-100">
+                            <h5 class="card-title">Integrated Display</h5>
+                            <p class="card-text flex-grow-1">
+                              HUD for SPARK Electric Racing's FBS 2 bike.
+                               Completely custom RPi CM5 carrier board.
+                               Hall effect, coolant and battery temperature,
+                               IMU, and global positioning sensors.
+                               Live communication via RF.
+                            </p>
+                            <a href="blog/integrated_display.html" class="card-link mt-auto">>> read more</a>
+                          </div>
+                          <div class="card-footer text-body-secondary">
+                              Ongoing since September 2024
+                          </div>                        
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                          <img src="static/projects/aurelianglove/card.png" class="card-img-top" alt="...">
+                          <div class="card-body d-flex flex-column h-100">
+                            <h5 class="card-title">Aurelian Glove</h5>
+                            <p class="card-text flex-grow-1">
+                              Chorded keyboard inputs translated into touch actions.
+                               Aimed to make typing more portable and to reduce the impact
+                               of the keyboard on sedentary work patterns.
+                               Designed for the E100-270 final project.
+                            </p>
+                            <a href="blog/aurelian_glove.html" class="card-link mt-auto">>> read more</a>
+                          </div>
+                          <div class="card-footer text-body-secondary">
+                              December 2024
+                          </div>                        
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                          <img src="static/projects/fluidsim/card.png" class="card-img-top" alt="...">
+                          <div class="card-body d-flex flex-column h-100">
+                            <h5 class="card-title">Fluid Simulation Pendant</h5>
+                            <p class="card-text flex-grow-1">
+                              Micro embedded system keychain simulating fluid motion.
+                               Displayed on a charlieplexed matrix of over 200 LEDs.
+                               Completely custom fluid simulation code.
+                            </p>
+                            <a href="blog/fluid_sim.html" class="card-link mt-auto">>> read more</a>
+                          </div>
+                          <div class="card-footer text-body-secondary">
+                              Ongoing since January 2025
+                          </div>                        
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    </body>
+</html>

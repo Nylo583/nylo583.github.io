@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <link href="../static/styles.css" rel="stylesheet">
+    </head>
+
+    <body data-bs-theme="dark">
+        <nav class="navbar navbar-expand-md bg-dark border-bottom border-warning-subtle" data-bs-theme="dark">
+            <div class="container-fluid  pb-2" style="max-width:1100px;">
+                <a class="navbar-brand text-bg-dark ms-4 me-2 mt-2" href="../index.html"><b>Nathan Ondrus</b></a>
+                <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mt-2">
+                    <li class="nav-item mx-2">
+                    <a class="nav-link active text-bg-dark" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active text-bg-dark" aria-current="page" href="../work.html">Work</a>
+                        </li>
+                    <li class="nav-item mx-2">
+                    <a class="nav-link text-bg-dark" href="../projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                    <a class="nav-link text-warning" href="../blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item ms-2 me-4">
+                    <a class="nav-link text-bg-dark" href="../gallery.html">Gallery</a>
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-md text-left d-block position-absolute mt-3 mt-sm-5 start-50 translate-middle-x" style="max-width:1100px;">
+            <div class="container-fluid">
+                <img src="../static/projects/aurelianglove/card.png" class="banner">
+                <div class="d-inline-flex flex-row align-items-center" style="margin-top: -1rem;">
+                    <h1 class="b-title mx-4">Aurelian Glove</h1>
+                    <h5 class="b-subtitle"><u>December 2024</u></h5>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <a href="../blog.html"><< back to blog directory</a>
+            </div>
+            
+            <div class="col my-4">
+                &emsp;For my E100-270 final project, our assignment was to design a new way for humans to interface with computers. Big, open-ended prompt — which meant every group either immediately chose some VR application, or spent two weeks arguing about it. Our team ended up deciding to tackle a problem we all kind of had in the back of our minds: the way desktops lock you to a desk because of the bulky peripherals. We wanted to rethink one of the most important ones: the keyboard.
+            </div>
+            <div class="col my-4">
+                &emsp;Early designs were questionable to say the least. At one point we mocked up rings that sat on your fingers like brass knuckles, and another idea involved motion-sensing bracelets. In the end, we settled on a full-hand glove design that used touch-sensitive pads on each finger, combined with a directional ring control pad on the index finger. Part of what led us there was accessibility; we realized the glove format would be easier for people with low dexterity or limited fine motor skills, compared to trying to rely on complex air gestures or tiny rings.
+            </p>
+            <div class="col mt-4 d-flex flex-column-reverse d-sm-block">
+                <div class="text-center text-sm-start">
+                    <figure class="figure float-sm-end ms-sm-4 mb-3" style="max-width: 350px; width: 100%;">
+                      <img src="../static/projects/aurelianglove/1.png" class="figure-img img-fluid rounded img-thumbnail" alt="...">
+                      <figcaption class="figure-caption text-center">Finger travel data</figcaption>
+                    </figure>
+                </div>
+                <p>
+                &emsp;The way the system works is actually pretty straightforward (at least on paper). The inputs are based on the “natural” finger placements for a QWERTY keyboard (ASDF and JKL;) home keys. Then, instead of reaching for other keys, you modulate that base position using one of nine directional inputs on the control pad. So, to type a Q, you'd touch down the left pinky (which normally maps to A), then use the northwest button on the control pad to move up and left to Q. This lets you cover the full keyboard without having to remember complicated finger combos, which has always been the biggest barrier to people actually using chorded keyboards.
+                As an added bonus, we were able to secure a 22.3% average decrease in finger travel compared to a traditional laptop keyboard. While this may not sound like much, this decrease combined with the reduction of repetitive motions for typing could be impactful on the development of carpal tunnel syndrome.
+                </p>
+            </div>
+            <div class="col my-4">
+                &emsp;My biggest contribution to the project was in the final design and prototyping the control boards that sat on the back of the glove. Each fingerpad has a force-sensitive resistor to detect contact, and the control panel itself is a simple XY button matrix to cut down on the number of ports we needed. The brains of the whole thing is an ATMega328, and the total manufacturing cost per set should land around $30. For context, most chorded keyboards cost upwards of $150, so we felt pretty good about that.
+                We didn't get around to producing a prototype by the end of the semester, but the glove design specs worked well enough to demo basic typing and gather the data we needed. Honestly, I'd love to come back to this someday and produce it in full; it was really fun and rewarding to design something that could improve what many consider to be an integral part of their lives.
+            </div>
+            <img class="img-fluid w-100 mb-4" src="../static/projects/aurelianglove/2.png">
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    </body>
+</html>

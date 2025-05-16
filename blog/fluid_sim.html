@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <link href="../static/styles.css" rel="stylesheet">
+    </head>
+
+    <body data-bs-theme="dark">
+        <nav class="navbar navbar-expand-md bg-dark border-bottom border-warning-subtle" data-bs-theme="dark">
+            <div class="container-fluid  pb-2" style="max-width:1100px;">
+                <a class="navbar-brand text-bg-dark ms-4 me-2 mt-2" href="../index.html"><b>Nathan Ondrus</b></a>
+                <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mt-2">
+                    <li class="nav-item mx-2">
+                    <a class="nav-link active text-bg-dark" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active text-bg-dark" aria-current="page" href="../work.html">Work</a>
+                        </li>
+                    <li class="nav-item mx-2">
+                    <a class="nav-link text-bg-dark" href="../projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                    <a class="nav-link text-warning" href="../blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item ms-2 me-4">
+                    <a class="nav-link text-bg-dark" href="../gallery.html">Gallery</a>
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-md text-left d-block position-absolute mt-3 mt-sm-5 start-50 translate-middle-x" style="max-width:1100px;">
+            <div class="container-fluid">
+                <img src="../static/projects/fluidsim/card.png" class="banner">
+                <div class="d-inline-flex flex-row align-items-center" style="margin-top: -1rem;">
+                    <h1 class="b-title mx-4">Fluid Sim Pendant</h1>
+                    <h5 class="b-subtitle"><u>January 2025</u></h5>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <a href="../blog.html"><< back to blog directory</a>
+            </div>
+            
+            <div class="col mt-4">
+                &emsp;<u>05/16/2025</u>
+            </div>
+            <div class="col mt-4">
+                &emsp;This is the first project that I am not backdating. This page will be regularly updated as more progress is made.
+            </div>
+            <div class="col mt-4">
+                &emsp;In January of this year, a few friends and I ventured to replicate a fluid simulation pendant that was going viral on YouTube. The <a href="https://mitxela.com/projects/fluid-pendant">original design by Mixtela</a> featured an 216-LED matrix and support for rotation in calculating how the fluid should operate.
+                We aim to improve on his design in a number of different ways:
+            </div>
+            <div class="col mt-4">
+                &emsp;1) Reduce the size of the pendant...a lot. By using smaller LEDs and genuinely insane charlieplexed routing, we can essentially half the size of the final piece.
+            </div>
+            <div class="col mt-4">
+                &emsp;2) Full motion support. Not just rotation, but also inertial movement.
+            </div>
+            <div class="col mt-4">
+                &emsp;3) Fully waterproof hardwood case. It just looks cooler.
+            </div>
+            <div class="col mt-4">
+                &emsp;Not much physical work has been done on the project as of now. We are still trying to validate our designs and then hopefully move into prototyping and code validation by the end of summer.
+                For now, we have our PCB in the routing phase, and the fluid simulation code is waiting for a prototype. While Mixtela uses STEP to simulate fluids, we use a custom approach that takes advantage of the low resolution of our output image to make some technical simplifications.
+                It's essentially a "marbles in a jar" type simulation. Think a couple hundred grains of sand with high elasticity with a variable coefficient of friction (high on surface, low on fluid). This allows us to achieve the same effect on such a small resolution (the only place this method would work).
+                Right now, the code is tested virtually using the console. The video below gives a good idea of what the screen may look like, with each () representing a lit LED.
+            </div>
+            <video src="../static/projects/fluidsim/1.mp4" muted controls class="object-fit-contain w-100 my-3"></video>
+            <div class="col mb-4">
+                &emsp;As you can see, there are a few areas for improvement in the simulation right now. Mainly, the grains of sand approach allows for a lot of what I call "visual decompression", where one grain of sand overlaps 4 LED coordinates and turns all of them on. This is obviously shown when the simulation is "tilted" (gravity is randomized),
+                and it looks like the amount of liquid increases as it flies around, then decreases back down as it settles. However, what is promising is that the time elapsed per simulation frame is less than what is even measurable by the C standard clock functions.
+                One possible solution to the decompression problem might be to vastly (i.e. 100x) the amount of particles in the simulation and shrink their radius by the same amount. Then, I would implement logic to only turn on the LED if a certain amount of the particles are completely contained in that area, similar to how you can see large collections of
+                water particles, but not each individual particle if there is a splash. More testing is needed to see if this approach is viable, especially when working with a far less powerful microcontroller instead of my desktop PC.
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    </body>
+</html>

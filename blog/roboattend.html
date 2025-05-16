@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <link href="../static/styles.css" rel="stylesheet">
+    </head>
+
+    <body data-bs-theme="dark">
+        <nav class="navbar navbar-expand-md bg-dark border-bottom border-warning-subtle" data-bs-theme="dark">
+            <div class="container-fluid  pb-2" style="max-width:1100px;">
+                <a class="navbar-brand text-bg-dark ms-4 me-2 mt-2" href="../index.html"><b>Nathan Ondrus</b></a>
+                <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mt-2">
+                    <li class="nav-item mx-2">
+                    <a class="nav-link active text-bg-dark" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active text-bg-dark" aria-current="page" href="../work.html">Work</a>
+                        </li>
+                    <li class="nav-item mx-2">
+                    <a class="nav-link text-bg-dark" href="../projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                    <a class="nav-link text-warning" href="../blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item ms-2 me-4">
+                    <a class="nav-link text-bg-dark" href="../gallery.html">Gallery</a>
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-md text-left d-block position-absolute mt-3 mt-sm-5 start-50 translate-middle-x" style="max-width:1100px;">
+            <div class="container-fluid">
+                <img src="../static/projects/roboattend/card.png" class="banner">
+                <div class="d-inline-flex flex-row align-items-center" style="margin-top: -1rem;">
+                    <h1 class="b-title mx-4">RoboAttend</h1>
+                    <h5 class="b-subtitle"><u>October 2023</u></h5>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <a href="../blog.html"><< back to blog directory</a>
+            </div>
+            <div class="col mt-4">
+                &emsp;During my time as a software engineer on my high school's robotics team (Robostangs #548), there was a great need by admin to 
+                migrate away from paper attendance forms as they often got lost, damaged, or were incorrectly filled out. Since nobody on the team had any 
+                actual interest in teaching me how to program the competition robot, I took it upon myself to create a virtual way for admin to track the team's 
+                attendance.
+            </div>  
+            
+            <div class="col d-flex flex-column-reverse d-sm-block">
+            <div class="text-center text-sm-start">
+                <figure class="figure float-sm-end ms-sm-4 my-4 my-sm-0" style="max-width: 500px; width: 100%;">
+                  <img src="../static/projects/roboattend/1.png" class="figure-img img-fluid rounded img-thumbnail" alt="...">
+                  <figcaption class="figure-caption text-center">Event sign in page</figcaption>
+                </figure>
+                
+            </div>
+            
+            <div class="col mt-4">
+                &emsp;This was right around my completion of AP CSA, so I decided to program it in Java using JavaFX as my application and graphics library.
+                On the home screen, I used Google's OAuth 2.0 API to get access to the user's Google Sheets directory. The password entered into the home screen 
+                corresponded with the ID of the relevant spreadsheet. This data was stored in teams.txt, and honestly I regret not including a workflow for adding
+                and removing password-ID pairs. Instead, the user has to do it themselves by adding a line following the format [password]|[ID]. This breaks the 
+                design philosophy that the user should not have to do any work for the app outside of the app itself.
+            </div>
+            </div>
+            <div class="col mt-4">
+                &emsp;Once the user has signed in, the app pulls the previous data from the spreadsheet. If I had more time, I would add validity checking for the
+                spreadsheet, but for now it is just a hardcoded layout. From the main page, the app obtains each student's data and hours, storing them locally.
+                At the same time, the user fills out information about the current event that students will sign in to. Options exist for min/max hours, event grouping
+                type (for data collection), and time rounding. 
+            </div>
+            <div class="col mt-4">
+                &emsp;The actual event page is populated with buttons for each student to sign into. There's also an admin sign-in workflow to edit the event,
+                fix mistakes made by students, and end the event. Ending the event updates each student's local data, which is sent through the Sheets API and populated
+                back into the spreadsheet. Then, the relevant event group pages are updated, and a separate page for just the event is created and populated.
+            </div>
+            <div class="col mt-4">
+                &emsp;The parent repository that exists within my team's GitHub is private, so I can't post a link. I'll try to figure out a way to upload the code 
+                separately in the future.
+            </div>
+            <img class="w-100 my-4" src="../static/projects/roboattend/2.png">
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    </body>
+</html>

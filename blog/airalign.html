@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <link href="../static/styles.css" rel="stylesheet">
+    </head>
+
+    <body data-bs-theme="dark">
+        <nav class="navbar navbar-expand-md bg-dark border-bottom border-warning-subtle" data-bs-theme="dark">
+            <div class="container-fluid  pb-2" style="max-width:1100px;">
+                <a class="navbar-brand text-bg-dark ms-4 me-2 mt-2" href="../index.html"><b>Nathan Ondrus</b></a>
+                <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mt-2">
+                    <li class="nav-item mx-2">
+                    <a class="nav-link active text-bg-dark" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active text-bg-dark" aria-current="page" href="../work.html">Work</a>
+                        </li>
+                    <li class="nav-item mx-2">
+                    <a class="nav-link text-bg-dark" href="../projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                    <a class="nav-link text-warning" href="../blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item ms-2 me-4">
+                    <a class="nav-link text-bg-dark" href="../gallery.html">Gallery</a>
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-md text-left d-block position-absolute mt-3 mt-sm-5 start-50 translate-middle-x" style="max-width:1100px;">
+            <div class="container-fluid">
+                <img src="../static/projects/airalign/card.png" class="banner">
+                <div class="d-inline-flex flex-row align-items-center" style="margin-top: -1rem;">
+                    <h1 class="b-title mx-4">AirAlign</h1>
+                    <h5 class="b-subtitle"><u>June 2024</u></h5>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <a href="../blog.html"><< back to blog directory</a>
+            </div>
+            <div class="col mt-4 d-flex flex-column-reverse d-sm-block">
+                <div class="text-center text-sm-start">
+                    <figure class="figure float-sm-end ms-sm-4 mb-3" style="max-width: 350px; width: 100%;">
+                      <img src="../static/projects/airalign/1.webp" class="figure-img img-fluid rounded img-thumbnail" alt="...">
+                      <figcaption class="figure-caption text-center">A mapleseed</figcaption>
+                    </figure>
+                </div>
+                <p>
+                &emsp;For my senior year's Invention Convention, my team and I set out with what we thought was a groundbreaking idea: 
+                redesign a wind turbine so it could work better in urban environments. Turns out, that's a lot easier said than done. 
+                For inspiration, we turned to biomimickry and tried to model a turbine based off of the shape of a mapleseed (the seeds
+                that spin as they fall off the tree). After a couple of weeks of messing around with sketches, rough CAD models, and debates
+                with our engineering teacher, we hit a wall. It turns out that a lot of incredibly smart and knowledgable people are working
+                on doing the exact same thing, and they have had little to no progress either. So, we pivoted.
+                </p>
+            </div>
+            <div class="col my-4">
+                &emsp;Our next idea was to create a prototype that could adjust the pitch of a vertical-axis wind turbine's blades, so it could tilt 
+                itself toward the wind. Picture one of those helix-shaped vertical-axis turbines you see in wind farms, but with a base that 
+                can lean in a 180 degree arc based on where the wind's coming from. We built it out of scrap wood, some old metal parts, 
+                and 3D printed pieces we knocked out in the school's maker space. At the core of it was a motor in the axis to measure backvoltage, 
+                which we hoped would give us a decent read on energy generation. We also fixed a servo to a secondary axis that would allow us to 
+                modify the pitch of the turbine. After much testing, we were able to generate about 0.2 V!! Such energy generation, even over a long,
+                long time, is completely useless. So again we pivoted.
+            </div>
+            <div class="container-fluid d-flex justify-content-center">
+                <img src="../static/projects/airalign/2.png" class="img-fluid img-thumbnail w-100" style="max-width: 400px;">
+            </div>
+            
+            <div class="col mt-4">
+                &emsp;But if we can't generate energy with the turbine, what can we use it for? We still had the functionality of the servo to adjust the pitch,
+                so what if we instead used it to collect data about the wind in a specific area? That was the basis of our final design: a centralized sensor 
+                network that would send data back to a predictive 3d model of the wind in a specific location (i.e. a city). To reinforce our final design to the 
+                judges, I used Unity to create a demo of the predictive model in action. It allows for WASD flythrough as well as a button to reset the sensors and 
+                randomize their data. Then, the flow lines are updated using proximity and direct sight logic. You can compile the demo for yourself 
+                <a href="https://github.com/Nylo583/retinaas-demo">here</a>.
+            </div>
+            <div class="col my-4">
+                &emsp;Overall, we placed 2nd in the Americas competition, which is the highest level of competition for the Invention Convention. Other awards include 
+                the Energy Award at the US Nationals level (I think we had also won 1st because we moved on, but in the rules it specified that you were only allowed to 
+                win one award), and 1st Place + Energy Award at the Michigan level. I'd also like to thank RTX for sponsoring the competition, as well as ITC for sponsoring
+                the Energy Awards, giving us a tour of their headquarters in Novi, and opening up doors for a potential internship in the Planning division.
+            </div>
+            <img class="img-fluid w-100 mb-4" src="../static/projects/airalign/3.JPG">
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    </body>
+</html>

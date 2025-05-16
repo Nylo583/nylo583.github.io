@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <link href="../static/styles.css" rel="stylesheet">
+    </head>
+
+    <body data-bs-theme="dark">
+        <nav class="navbar navbar-expand-md bg-dark border-bottom border-warning-subtle" data-bs-theme="dark">
+            <div class="container-fluid  pb-2" style="max-width:1100px;">
+                <a class="navbar-brand text-bg-dark ms-4 me-2 mt-2" href="../index.html"><b>Nathan Ondrus</b></a>
+                <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mt-2">
+                    <li class="nav-item mx-2">
+                    <a class="nav-link active text-bg-dark" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active text-bg-dark" aria-current="page" href="../work.html">Work</a>
+                        </li>
+                    <li class="nav-item mx-2">
+                    <a class="nav-link text-bg-dark" href="../projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                    <a class="nav-link text-warning" href="../blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item ms-2 me-4">
+                    <a class="nav-link text-bg-dark" href="../gallery.html">Gallery</a>
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-md text-left d-block position-absolute mt-3 mt-sm-5 start-50 translate-middle-x" style="max-width:1100px;">
+            <div class="container-fluid">
+                <img src="../static/projects/fannergy/card.png" class="banner">
+                <div class="d-inline-flex flex-row align-items-center" style="margin-top: -1rem;">
+                    <h1 class="b-title mx-4">Fannergy</h1>
+                    <h5 class="b-subtitle"><u>August 2022</u></h5>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <a href="../blog.html"><< back to blog directory</a>
+            </div>
+            <div class="col mt-4">
+                <p>
+                &emsp;My first completed Hackathon was for the World World Youth Coders Hackathon. 
+                I remember one of my friends (let's call him S) proposed, as a joke, to create an AI fan 
+                for the theme of “Beating the Heat”. We called up our third group member in Canada 
+                (Mr. C for no other reason) and production was underway.
+                <br></p><p>
+                    &emsp;We had an entire week (wrong, we wasted 2 days on the idea) to create an integrated smart fan, 
+                complete with a website interface. I would handle the AI model and the website, C would work on 
+                the web server, and S would tackle sensing and hardware.
+                <br>
+                </p>
+                <div class="text-center text-sm-start">
+                    <figure class="figure float-sm-end ms-sm-4 mb-3" style="max-width: 400px; width: 100%;">
+                      <img src="../static/projects/fannergy/fig.png" class="figure-img img-fluid rounded img-thumbnail" alt="...">
+                      <figcaption class="figure-caption text-center">Loss graph (500 epochs)</figcaption>
+                    </figure>
+                </div>
+                <p>
+                    &emsp;It took me around a day to set up the Tensorflow model in Python and train it on systematically 
+                generated data. The end goal of the Fannergy system was to spin the fan at a pace which would attempt 
+                to cancel out changes in room temperature and humidity and keep the room at a pleasant 70 degrees 
+                Fahrenheit. 
+                <br></p><p>&emsp;If I had more time, I would've pulled data from an API to make a better dataset, but I went 
+                with the “random-number-and-calculate” dataset generation method. In the end, it worked out with a 0.05% 
+                margin of error after 500 or so epochs of training.
+                <br></p>
+                <p>
+                    &emsp;It was now day 4 and time to get started on the website. Our team ended up deciding to create a home page, 
+                    ID login, and a control board page which would either set a manual fan speed or give way to the AI to make 
+                    decisions for the user. It would also include JS graphs of historical temperature and humidity readings. 
+                    This was my first expedition into making websites, so it took me the great deal of the rest of the last 4 
+                    days to come up with a somewhat-pleasing-to-the-eye interface. See the demonstration and screenshots
+                    below.<br>
+                </p>
+                <div class="row row-cols-1 row-cols-md-3 my-5">
+                    <div class="col">
+                        <img class="w-100 my-2" src="../static/projects/fannergy/1.png">
+                    </div>
+                    <div class="col">
+                        <img class="w-100 my-2" src="../static/projects/fannergy/2.png">
+                    </div>
+                    <div class="col">
+                        <img class="w-100 my-2" src="../static/projects/fannergy/3.png">
+                    </div>
+                </div>
+                <video src="../static/projects/fannergy/v.mp4" controls class="object-fit-contain w-100 mb-5"></video>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>    
+    </body>
+</html>
